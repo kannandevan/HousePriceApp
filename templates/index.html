@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; margin-top: 50px; }
+        form { background: white; max-width: 500px; margin: auto; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        input { width: 95%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ddd; }
+        button { background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        h1 { color: #333; }
+        h2 { color: #0056b3; }
+        img { max-width: 600px; margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <h1>House Price Prediction AI</h1>
+
+    <img src="/static/income_vs_price.png" alt="Income vs. Price Graph">
+    
+    <form action="/predict" method="post">
+        <label for="income">Avg. Area Income:</label>
+        <input type="text" id="income" name="income" required="required" placeholder="e.g., 70000">
+
+        <label for="age">Avg. Area House Age:</label>
+        <input type="text" id="age" name="age" required="required" placeholder="e.g., 6">
+
+        <label for="rooms">Avg. Area Number of Rooms:</label>
+        <input type="text" id="rooms" name="rooms" required="required" placeholder="e.g., 7">
+
+        <label for="bedrooms">Avg. Area Number of Bedrooms:</label>
+        <input type="text" id="bedrooms" name="bedrooms" required="required" placeholder="e.g., 4">
+
+        <label for="population">Area Population:</label>
+        <input type="text" id="population" name="population" required="required" placeholder="e.g., 35000">
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    <br>
+    <h2>{{ prediction_text }}</h2>
+
+</body>
+</html>
