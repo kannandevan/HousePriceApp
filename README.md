@@ -42,7 +42,7 @@ To run this project on your local machine, follow these steps:
 
 **1. Clone the Repository (or download the files):**
 ```bash
-git clone [https://github.com/kannandevan/HousePriceApp.git](https://github.com/kannandevan/HousePriceApp.git)
+git clone https://github.com/kannandevan/HousePriceApp.git
 cd HousePriceApp
 ```
 
